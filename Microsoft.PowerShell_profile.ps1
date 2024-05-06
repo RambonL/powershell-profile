@@ -90,12 +90,12 @@ $EDITOR = if (Test-CommandExists nvim) { 'nvim' }
           elseif (Test-CommandExists pvim) { 'pvim' }
           elseif (Test-CommandExists vim) { 'vim' }
           elseif (Test-CommandExists vi) { 'vi' }
-          elseif (Test-CommandExists notepad++) { 'notepad++' }
           elseif (Test-CommandExists code) { 'code' }
+          elseif (Test-CommandExists notepad++) { 'notepad++' }
           elseif (Test-CommandExists sublime_text) { 'sublime_text' }
           else { 'notepad' }
 Set-Alias -Name vim -Value $EDITOR
-
+Set-Alias -Name vim++ -Value 'notepad++'
 function Edit-Profile {
     vim $PROFILE.CurrentUserAllHosts
 }
