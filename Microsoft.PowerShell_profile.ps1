@@ -107,7 +107,7 @@ function ff($name) {
 }
 
 # Network Utilities
-function Get-PubIP { (Invoke-WebRequest http://ifconfig.me/ip).Content }
+function Get-PubIP { (Invoke-WebRequest https://am.i.mullvad.net/ip).Content }
 
 # System Utilities
 function uptime {
