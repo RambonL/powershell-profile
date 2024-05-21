@@ -108,6 +108,8 @@ function ff($name) {
 
 # Network Utilities
 function Get-PubIP { (Invoke-WebRequest https://am.i.mullvad.net/ip).Content }
+function Get-Mainboard { Get-WMIObject -class Win32_baseboard | select  product,Manufacturer,version,serialnumber }
+function Get-RAM { Get-WMIObject -class Win32_Physicalmemory | select PSComputerName, PartNumber, Capacity, Speed, ConfiguredVoltage, DeviceLocator, Tag, SerialNumber }
 
 # System Utilities
 function uptime {
